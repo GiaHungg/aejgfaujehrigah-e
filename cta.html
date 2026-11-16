@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tập Luyện | D-TEAM</title>
+    <link rel="icon" type="image/png" href="https://scontent.fhan4-2.fna.fbcdn.net/v/t39.30808-1/552808860_122158259534785434_5533085333067111101_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s200x200&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeGTnOx4MSWlwUqLUGpulzA_ddJLPkFqFKJ10ks-QWoUomFthYfPacVB52rs1-tMZsPKz1jswZGyQGWB_7vx5Hhf&_nc_ohc=yUC_Pg5vmd0Q7kNvwHnZp2T&_nc_oc=Adq8xhMeKCmWGREp3WHU7XCw43DID_yLmcHHgzwRtsvij4qQk6eeHCvFOrvdSdDvdiUM5ms7FT6N1DmttDRSZ36h&_nc_zt=24&_nc_ht=scontent.fhan4-2.fna&_nc_gid=LjGa0Klz_53Eh6rHRsC4xQ&_nc_ss=7b2a8&oh=00_AQTmoI796FgXuNvRRiD-miVbIQmQXMP7exPTImxaVeu_9w&oe=6AFD00FD">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-cta">
+
+
+   <!--HEADER-->
+    <header>
+        <a href="trangchu.html" class="logo">
+            <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t39.30808-1/552808860_122158259534785434_5533085333067111101_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s200x200&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeGTnOx4MSWlwUqLUGpulzA_ddJLPkFqFKJ10ks-QWoUomFthYfPacVB52rs1-tMZsPKz1jswZGyQGWB_7vx5Hhf&_nc_ohc=yUC_Pg5vmd0Q7kNvwHnZp2T&_nc_oc=Adq8xhMeKCmWGREp3WHU7XCw43DID_yLmcHHgzwRtsvij4qQk6eeHCvFOrvdSdDvdiUM5ms7FT6N1DmttDRSZ36h&_nc_zt=24&_nc_ht=scontent.fhan4-2.fna&_nc_gid=LjGa0Klz_53Eh6rHRsC4xQ&_nc_ss=7b2a8&oh=00_AQTmoI796FgXuNvRRiD-miVbIQmQXMP7exPTImxaVeu_9w&oe=6AFD00FD" alt="DTEAM Logo">
+            <span>DTEAM</span>
+        </a>
+ <!-- thanh -->
+        <nav class="navbar">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="Dteam.html">Về DTEAM</a>
+            <a href="monhoc.html">Môn học</a>
+            <a href="goitap.html">Lịch Tập Gói Tập</a>
+            <a href="cta.html" class="register-btn">Đăng ký</a>
+        </nav>
+    </header>
+
+
+    <!-- Khối form đăng ký -->
+    <main class="form-container">
+        <h2>ĐĂNG KÝ TẬP LUYỆN</h2>
+
+
+        <!-- TAB CHUYỂN ĐỔI: TẬP THỬ VS ĐĂNG KÝ GÓI -->
+        <div class="tab-group">
+            <button class="tab-btn active" type="button" onclick="switchTab('trial', this)">Đăng ký tập thử (Free)</button>
+            <button class="tab-btn" type="button" id="tabPackageBtn" onclick="switchTab('package', this)">Đăng ký gói tập</button>
+        </div>
+
+
+        <!-- Thông báo tự động nếu đi từ Case 1 (Trang gói tập sang) -->
+        <div id="case1Notice" class="notice" style="display: none;">
+            ✓ Đã tự động chọn Bộ môn & Trình độ từ gói tập của bạn!
+        </div>
+
+
+        <form id="registerForm" onsubmit="event.preventDefault(); submitForm();">
+            <div class="form-group">
+                <label for="fullname">Họ và tên *</label>
+                <input type="text" id="fullname" placeholder="Nhập họ và tên" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại / Zalo *</label>
+                <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="sport">Lựa chọn bộ môn</label>
+                <select id="sport">
+                    <option value="Kickboxing">Kickboxing</option>
+                    <option value="BJJ & Grappling">BJJ & Grappling</option>
+                    <option value="MMA">MMA</option>
+                </select>
+            </div>
+
+
+            <!-- PHẦN DÀNH RIÊNG CHO ĐĂNG KÝ TẬP THỬ -->
+            <div id="trialFields">
+                <div class="form-group">
+                    <label for="trialDate">Ngày & giờ muốn tập thử</label>
+                    <input type="datetime-local" id="trialDate">
+                </div>
+            </div>
+
+
+            <!-- PHẦN DÀNH RIÊNG CHO ĐĂNG KÝ GÓI TẬP -->
+            <div id="packageFields" style="display: none;">
+                <div class="form-group">
+                    <label for="duration">Thời hạn gói tập</label>
+                    <select id="duration">
+                        <option value="1 tháng">Gói 1 tháng</option>
+                        <option value="3 tháng">Gói 3 tháng</option>
+                        <option value="6 tháng">Gói 6 tháng</option>
+                        <option value="12 tháng">Gói 12 tháng</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="level">Trình độ hiện tại</label>
+                    <select id="level">
+                        <option value="Beginner (Mới bắt đầu)">Beginner (Mới bắt đầu)</option>
+                        <option value="Intermediate (Đã có nền tảng)">Intermediate (Đã có nền tảng)</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="note">Ghi chú (Tùy chọn)</label>
+                <textarea id="note" rows="2" placeholder="Thời gian mong muốn tập..."></textarea>
+            </div>
+
+
+
+
+            <button type="submit" class="btn-submit" id="btnSubmitText">XÁC NHẬN ĐĂNG KÝ TẬP THỬ</button>
+        </form>
+
+
+
+
+        <!-- Màn hình kết quả -->
+        <div id="successBox" class="success-box" style="display: none;">
+            <h3 style="color: #4CAF50;">✓ ĐĂNG KÝ THÀNH CÔNG!</h3>
+            <p>D-Team sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+            <div id="resultContent" class="result-card"></div>
+            <button type="button" class="btn-submit" onclick="resetForm()" style="margin-top: 15px;">Đăng ký lại</button>
+        </div>
+    </main>
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+
+    <div class="footer-top">
+
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+            <a href="trangchu.html" class="logo">
+                <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t39.30808-1/552808860_122158259534785434_5533085333067111101_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x1280&ctp=s200x200&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeGTnOx4MSWlwUqLUGpulzA_ddJLPkFqFKJ10ks-QWoUomFthYfPacVB52rs1-tMZsPKz1jswZGyQGWB_7vx5Hhf&_nc_ohc=yUC_Pg5vmd0Q7kNvwHnZp2T&_nc_oc=Adq8xhMeKCmWGREp3WHU7XCw43DID_yLmcHHgzwRtsvij4qQk6eeHCvFOrvdSdDvdiUM5ms7FT6N1DmttDRSZ36h&_nc_zt=24&_nc_ht=scontent.fhan4-2.fna&_nc_gid=LjGa0Klz_53Eh6rHRsC4xQ&_nc_ss=7b2a8&oh=00_AQTmoI796FgXuNvRRiD-miVbIQmQXMP7exPTImxaVeu_9w&oe=6AFD00FD" alt="DTEAM Logo">
+                <span>DTEAM</span>
+            </a>
+
+
+            <p>
+                Built on discipline.<br>
+                United by passion.
+            </p>
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-contact">
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+
+
+            <p>
+                <strong>Địa chỉ:</strong><br>
+                Số 8, Ngách 12 ngõ 604 đường Ngọc Thuỵ,
+                phường Bồ Đề, Hà Nội
+            </p>
+
+
+            <p>
+                <strong>Hotline / Zalo:</strong><br>
+                <a href="tel:0969796325">0969796325</a>
+            </p>
+
+
+
+
+            <p>
+                <strong>Email:</strong><br>
+                <a href="mailto:ingoditrust1896@gmail.com">
+                    ingoditrust1896@gmail.com
+                </a>
+            </p>
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+        <div class="footer-social">
+            <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+
+
+
+
+            <p>
+                <strong>Facebook Page:</strong><br>
+                <a href="https://www.facebook.com/profile.php?id=61573563024132" target="_blank">
+                    D-Team
+                </a>
+            </p>
+
+
+            <p>
+                <strong>TikTok / YouTube:</strong><br>
+                <a href="https://www.tiktok.com/@godfirst0101?lang=en" target="_blank">
+                    @godfirst0101 (Duc Pham)
+                </a>
+            </p>
+
+
+            <p class="footer-slogan">
+                TRAIN HARDER.<br>
+                BE STRONGER.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <p>© 2026 DTEAM. All rights reserved.</p>
+        <p>DISCIPLINE · RESPECT · PROGRESS</p>
+    </div>
+
+
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4317 @@
+
+/* =====================================================================
+   0. DUNG CHUNG CHO MOI TRANG
+===================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================================================
+   PAGE: TRANG CHU (trangchu.html)   -> body.page-trangchu
+===================================================================== */
+
+/* =========================================
+   1. CAI DAT CHUNG
+========================================= */
+
+body.page-trangchu {
+    font-family: "Times New Roman", Times, serif;
+    color: #222222;
+    background-color: white;
+    line-height: 1.7;
+}
+
+body.page-trangchu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body.page-trangchu img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+body.page-trangchu header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 5%;
+    background-color: #000000;
+    
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+body.page-trangchu .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+body.page-trangchu .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+body.page-trangchu .navbar {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+body.page-trangchu .navbar a {
+    color: #E5E5E0;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+body.page-trangchu .navbar a:hover,
+body.page-trangchu .navbar a.active {
+    color: #C7A66A;
+}
+
+body.page-trangchu .navbar .register-btn {
+    background-color: #C7A66A;
+    color: black;
+    padding: 11px 20px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.page-trangchu .navbar .register-btn:hover {
+    background-color: #AD8D53;
+    color: white;
+}
+
+/* =========================================
+   3. HERO BANNER
+========================================= */
+
+/* =========================================
+   HERO BANNER - ANH NEN MO
+========================================= */
+
+body.page-trangchu .hero {
+    position: relative;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 9%;
+    color: white;
+
+    overflow: hidden;
+    background-color: #151515;
+}
+
+/* LOP ANH NEN */
+
+body.page-trangchu .hero::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+
+    background-image: url("https://images.openai.com/static-rsc-4/4wXFsS3J55d7EoI1IMm_AveQFu84h6bM0fU8kUxz1lgj3ix3q_Ob4iEL1_PsOr_KaczbqcVQH5AuzsCyFA_2WGrOMQpZpEuKh3rLclM1P7O06jrk_u2GzKLfWSzi0z_b8ILr1325Z4-t2sbt5J68WhxPkSBed4A59Wc5czabSDi--waXRHd7ZSrOq8quFG7L?purpose=fullsize");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(3px);
+    opacity: 0.55;
+
+    transform: scale(1.03);
+    z-index: 0;
+}
+
+/* LOP PHU LAM TOI ANH */
+
+body.page-trangchu .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.30)
+    );
+
+    z-index: 1;
+}
+
+/* NOI DUNG HERO */
+
+body.page-trangchu .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+body.page-trangchu .hero-content > p:first-child {
+    color: #C7A66A;
+    font-size: 17px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+body.page-trangchu .hero h1 {
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+body.page-trangchu .hero h1 span {
+    color: #C7A66A;
+}
+
+body.page-trangchu .hero-content > p:not(:first-child) {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #E0E2DC;
+    margin-bottom: 32px;
+    max-width: 550px;
+}
+
+body.page-trangchu .btn {
+    display: inline-block;
+    background-color: #C7A66A;
+    color: #000000;
+    padding: 15px 28px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.page-trangchu .btn:hover {
+    background-color: #AD8D53;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================
+   4. CAC PHAN NOI DUNG
+========================================= */
+
+body.page-trangchu .intro {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    padding: 85px 9%;
+    background: #F2F0E9;
+}
+
+body.page-trangchu .intro.reverse {
+    flex-direction: row-reverse;
+    background-color: #E6E5DC;
+}
+
+body.page-trangchu .intro img {
+    width: 48%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 10px 10px 0 #C7A66A;
+    transition: 0.4s;
+}
+
+body.page-trangchu .intro img:hover {
+    transform: scale(1.02);
+    box-shadow: 12px 12px 0 #AD8D53;
+}
+
+body.page-trangchu .intro-content {
+    flex: 1;
+}
+
+body.page-trangchu .intro-content > p:first-child {
+    color: #AD8D53;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+body.page-trangchu .intro-content h2 {
+    color: #000000;
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 23px;
+    font-weight: 800;
+}
+
+body.page-trangchu .intro-content p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #626962;
+    margin-bottom: 16px;
+}
+
+body.page-trangchu .intro-content a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 24px;
+    background: #26332D;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.page-trangchu .intro-content a:hover {
+    background-color: #C7A66A;
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   5. CALL TO ACTION
+========================================= */
+
+body.page-trangchu .final-cta {
+    padding: 90px 8%;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(18, 25, 21, 0.92),
+            rgba(18, 25, 21, 0.92)
+        ),
+        url("images/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+body.page-trangchu .cta-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+body.page-trangchu .cta-content > p:first-child {
+    color: #C7A66A;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+body.page-trangchu .cta-content h2 {
+    font-size: 43px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+body.page-trangchu .cta-content h2 span {
+    color: #C7A66A;
+}
+
+body.page-trangchu .cta-content p {
+    color: #D2D6D0;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   6. FOOTER
+========================================= */
+
+body.page-trangchu .footer {
+    background-color: #111111;
+    color: white;
+    padding: 45px 6% 15px;
+}
+
+body.page-trangchu .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+body.page-trangchu .footer-logo,
+body.page-trangchu .footer-contact,
+body.page-trangchu .footer-social {
+    width: 33.33%;
+}
+
+body.page-trangchu .footer-logo .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+body.page-trangchu .footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+body.page-trangchu .footer-logo p {
+    color: #CCCCCC;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+body.page-trangchu .footer h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #C7A66A;
+}
+
+body.page-trangchu .footer p {
+    font-size: 17px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+body.page-trangchu .footer-contact p,
+body.page-trangchu .footer-social p {
+    margin-bottom: 15px;
+}
+
+body.page-trangchu .footer a {
+    color: #CCCCCC;
+    transition: 0.3s;
+}
+
+body.page-trangchu .footer a:hover {
+    color: #C7A66A;
+}
+
+body.page-trangchu .footer-slogan {
+    color: #C7A66A;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+body.page-trangchu .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #444444;
+    padding-top: 18px;
+    color: #AAAAAA;
+    font-size: 15px;
+}
+
+/* =========================================
+   7. RESPONSIVE - TABLET
+   MAN HINH TOI DA 1024PX
+========================================= */
+
+@media (max-width: 1024px) {
+    body.page-trangchu header {
+        padding: 12px 3%;
+    }
+
+    body.page-trangchu .logo {
+        font-size: 26px;
+    }
+
+    body.page-trangchu .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    body.page-trangchu .navbar {
+        gap: 12px;
+    }
+
+    body.page-trangchu .navbar a {
+        font-size: 15px;
+    }
+
+    body.page-trangchu .hero {
+        padding: 60px 6%;
+    }
+
+    body.page-trangchu .hero h1 {
+        font-size: 48px;
+    }
+
+    body.page-trangchu .hero-content > p:not(:first-child) {
+        font-size: 18px;
+    }
+
+    body.page-trangchu .intro,
+    body.page-trangchu .intro.reverse {
+        padding: 55px 5%;
+        gap: 30px;
+    }
+
+    body.page-trangchu .intro img {
+        height: 280px;
+    }
+
+    body.page-trangchu .intro-content h2 {
+        font-size: 32px;
+    }
+
+    body.page-trangchu .intro-content p {
+        font-size: 18px;
+    }
+
+    body.page-trangchu .intro-content a {
+        font-size: 14px;
+    }
+
+    body.page-trangchu .cta-content h2 {
+        font-size: 36px;
+    }
+
+    body.page-trangchu .cta-content p {
+        font-size: 18px;
+    }
+
+    body.page-trangchu .footer {
+        padding: 40px 4% 15px;
+    }
+
+    body.page-trangchu .footer-top {
+        gap: 25px;
+    }
+
+    body.page-trangchu .footer h3 {
+        font-size: 19px;
+    }
+
+    body.page-trangchu .footer p {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   8. RESPONSIVE - MOBILE
+   MAN HINH TOI DA 768PX
+========================================= */
+
+@media (max-width: 768px) {
+    body.page-trangchu header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    body.page-trangchu .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    body.page-trangchu .navbar a {
+        font-size: 15px;
+    }
+
+    body.page-trangchu .hero {
+        min-height: 420px;
+        padding: 45px 6%;
+    }
+
+    body.page-trangchu .hero h1 {
+        font-size: 38px;
+    }
+
+    body.page-trangchu .hero-content > p:first-child {
+        font-size: 15px;
+    }
+
+    body.page-trangchu .hero-content > p:not(:first-child) {
+        font-size: 17px;
+    }
+
+    body.page-trangchu .intro,
+    body.page-trangchu .intro.reverse {
+        flex-direction: column;
+        padding: 40px 6%;
+        gap: 25px;
+    }
+
+    body.page-trangchu .intro img {
+        width: 100%;
+        height: 280px;
+    }
+
+    body.page-trangchu .intro-content {
+        width: 100%;
+    }
+
+    body.page-trangchu .intro-content h2 {
+        font-size: 29px;
+    }
+
+    body.page-trangchu .intro-content p {
+        font-size: 17px;
+    }
+
+    body.page-trangchu .intro-content a {
+        font-size: 14px;
+    }
+
+    body.page-trangchu .final-cta {
+        padding: 55px 6%;
+    }
+
+    body.page-trangchu .cta-content h2 {
+        font-size: 32px;
+    }
+
+    body.page-trangchu .cta-content p {
+        font-size: 17px;
+    }
+
+    body.page-trangchu .btn {
+        font-size: 15px;
+    }
+
+    body.page-trangchu .footer {
+        padding: 35px 6% 15px;
+    }
+
+    body.page-trangchu .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.page-trangchu .footer-logo,
+    body.page-trangchu .footer-contact,
+    body.page-trangchu .footer-social {
+        width: 100%;
+    }
+
+    body.page-trangchu .footer h3 {
+        font-size: 19px;
+    }
+
+    body.page-trangchu .footer p {
+        font-size: 16px;
+    }
+
+    body.page-trangchu .footer-bottom {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   9. RESPONSIVE - DIEN THOAI NHO
+   MAN HINH TOI DA 480PX
+========================================= */
+
+@media (max-width: 480px) {
+    body.page-trangchu .logo {
+        font-size: 24px;
+    }
+
+    body.page-trangchu .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    body.page-trangchu .navbar {
+        gap: 8px 12px;
+    }
+
+    body.page-trangchu .navbar a {
+        font-size: 14px;
+    }
+
+    body.page-trangchu .navbar .register-btn {
+        padding: 8px 13px;
+    }
+
+    body.page-trangchu .hero {
+        min-height: 350px;
+        padding: 35px 5%;
+    }
+
+    body.page-trangchu .hero h1 {
+        font-size: 32px;
+    }
+
+    body.page-trangchu .hero-content > p:first-child {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    body.page-trangchu .hero-content > p:not(:first-child) {
+        font-size: 16px;
+    }
+
+    body.page-trangchu .btn {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    body.page-trangchu .intro,
+    body.page-trangchu .intro.reverse {
+        padding: 32px 5%;
+    }
+
+    body.page-trangchu .intro img {
+        height: 220px;
+    }
+
+    body.page-trangchu .intro-content > p:first-child {
+        font-size: 13px;
+    }
+
+    body.page-trangchu .intro-content h2 {
+        font-size: 26px;
+    }
+
+    body.page-trangchu .intro-content p {
+        font-size: 16px;
+    }
+
+    body.page-trangchu .intro-content a {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+
+    body.page-trangchu .final-cta {
+        padding: 45px 5%;
+    }
+
+    body.page-trangchu .cta-content h2 {
+        font-size: 27px;
+    }
+
+    body.page-trangchu .cta-content > p:first-child {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    body.page-trangchu .cta-content p {
+        font-size: 16px;
+    }
+
+    body.page-trangchu .footer {
+        padding: 30px 5% 12px;
+    }
+
+    body.page-trangchu .footer-logo .logo {
+        font-size: 24px;
+    }
+
+    body.page-trangchu .footer h3 {
+        font-size: 17px;
+    }
+
+    body.page-trangchu .footer p {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    body.page-trangchu .footer-bottom {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================================
+   PAGE: VE DTEAM (Dteam.html)   -> body.page-dteam
+===================================================================== */
+
+/* =========================================
+   1. CAI DAT CHUNG
+========================================= */
+
+html:has(body.page-dteam) {
+    scroll-padding-top: 20px;
+}
+
+body.page-dteam {
+    font-family: "Times New Roman", Times, serif;
+    background: #FFFFFF;
+    color: #222222;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.page-dteam a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body.page-dteam img {
+    max-width: 100%;
+    display: block;
+}
+
+body.page-dteam h2,
+body.page-dteam h3,
+body.page-dteam h4 {
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+body.page-dteam header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 5%;
+    background: #000000;
+    position: relative;
+    z-index: 10;
+}
+
+body.page-dteam .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+body.page-dteam .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+body.page-dteam .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px 27px;
+}
+
+body.page-dteam .navbar a {
+    color: #E5E5E0;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+body.page-dteam .navbar a:hover,
+body.page-dteam .navbar a.active {
+    color: #C7A66A;
+}
+
+body.page-dteam .navbar .register-btn {
+    background: #C7A66A;
+    color: #000000;
+    padding: 11px 20px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+body.page-dteam .navbar .register-btn:hover {
+    background: #AD8D53;
+    color: white;
+}
+
+/* =========================================
+   3. BANNER
+========================================= */
+
+body.page-dteam .about-banner {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    background: #151515;
+}
+
+body.page-dteam .about-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.5s ease;
+}
+
+/* =========================================
+   4. CAU CHUYEN DTEAM
+========================================= */
+
+body.page-dteam .story {
+    padding: 85px 9%;
+    background: #F2F0E9;
+    text-align: center;
+}
+
+body.page-dteam .story h2 {
+    color: #222222;
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+body.page-dteam .story h2::after,
+body.page-dteam .philosophy h2::after,
+body.page-dteam .students h2::after,
+body.page-dteam .gym h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background: #C7A66A;
+    margin: 14px auto 0;
+}
+
+body.page-dteam .story p {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    color: #626962;
+    font-size: 20px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* =========================================
+   5. TRIET LY HOAT DONG
+========================================= */
+
+body.page-dteam .philosophy {
+    padding: 85px 9%;
+    background: #E6E5DC;
+    text-align: center;
+}
+
+body.page-dteam .philosophy h2 {
+    color: #222222;
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+body.page-dteam .three-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+body.page-dteam .card {
+    background: white;
+    border-bottom: 4px solid #C7A66A;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.page-dteam .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+body.page-dteam .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+body.page-dteam .card:hover img {
+    transform: scale(1.04);
+}
+
+body.page-dteam .card h3 {
+    color: #222222;
+    font-size: 27px;
+    margin: 22px 10px 5px;
+    letter-spacing: 1px;
+}
+
+body.page-dteam .card h4 {
+    color: #AD8D53;
+    font-size: 19px;
+    margin: 0 10px 12px;
+}
+
+body.page-dteam .card p {
+    color: #626962;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 15px 25px;
+}
+
+/* =========================================
+   6. HEAD COACH
+========================================= */
+
+body.page-dteam .coach {
+    padding: 85px 9%;
+    background: #F2F0E9;
+}
+
+body.page-dteam .coach-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+body.page-dteam .coach-title h2 {
+    color: #222222;
+    font-size: 40px;
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+body.page-dteam .coach-title h3 {
+    color: #AD8D53;
+    font-size: 29px;
+    margin: 10px 0;
+}
+
+body.page-dteam .coach-title p {
+    color: #AD8D53;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+body.page-dteam .coach-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+body.page-dteam .coach-content > img {
+    width: 40%;
+    height: 520px;
+    object-fit: cover;
+    box-shadow: 8px 8px 0 #C7A66A;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+body.page-dteam .coach-content > img:hover {
+    transform: translateY(-4px);
+    box-shadow: 12px 12px 0 #AD8D53;
+}
+
+body.page-dteam .coach-info {
+    flex: 1;
+    min-width: 0;
+}
+
+body.page-dteam .coach-info h3 {
+    color: #26332D;
+    font-size: 23px;
+    line-height: 1.4;
+    margin: 20px 0 15px;
+    padding-left: 12px;
+    border-left: 4px solid #C7A66A;
+}
+
+body.page-dteam .coach-info h3:first-child {
+    margin-top: 0;
+}
+
+body.page-dteam .coach-info p {
+    color: #626962;
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+body.page-dteam .coach-info p b {
+    color: #222222;
+}
+
+body.page-dteam .coach-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body.page-dteam .coach-info li {
+    position: relative;
+    color: #626962;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+body.page-dteam .coach-info li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #AD8D53;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* =========================================
+   7. THANH TICH HOC VIEN
+========================================= */
+
+body.page-dteam .students {
+    padding: 85px 9%;
+    background: #E6E5DC;
+    text-align: center;
+}
+
+body.page-dteam .students h2 {
+    color: #222222;
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+body.page-dteam .student-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+body.page-dteam .student-card {
+    background: white;
+    padding-bottom: 28px;
+    border-bottom: 4px solid #C7A66A;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    min-width: 0;
+}
+
+body.page-dteam .student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+body.page-dteam .student-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+body.page-dteam .student-card:hover img {
+    transform: scale(1.03);
+}
+
+body.page-dteam .student-card > div {
+    padding: 0 22px;
+}
+
+body.page-dteam .student-card h3 {
+    color: #222222;
+    font-size: 25px;
+    margin: 22px 0 8px;
+}
+
+body.page-dteam .student-card p {
+    color: #626962;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+body.page-dteam .student-card p:first-of-type {
+    color: #AD8D53;
+    font-weight: bold;
+}
+
+body.page-dteam .student-card ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin-top: 15px;
+}
+
+body.page-dteam .student-card li {
+    position: relative;
+    color: #626962;
+    font-size: 17px;
+    line-height: 1.7;
+    padding-left: 20px;
+    margin-bottom: 9px;
+}
+
+body.page-dteam .student-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #AD8D53;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* =========================================
+   8. KHONG GIAN TAP LUYEN
+========================================= */
+
+body.page-dteam .gym {
+    padding: 85px 9%;
+    background: #F2F0E9;
+    text-align: center;
+}
+
+body.page-dteam .gym h2 {
+    color: #222222;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+body.page-dteam .gym-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+body.page-dteam .gym-images img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.page-dteam .gym-images img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   9. FOOTER
+========================================= */
+
+body.page-dteam .footer {
+    background: #111111;
+    color: white;
+    padding: 45px 6% 15px;
+}
+
+body.page-dteam .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+body.page-dteam .footer-logo,
+body.page-dteam .footer-contact,
+body.page-dteam .footer-social {
+    width: 33.33%;
+    min-width: 0;
+}
+
+body.page-dteam .footer-logo .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+body.page-dteam .footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+body.page-dteam .footer-logo p {
+    color: #CCCCCC;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+body.page-dteam .footer h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #C7A66A;
+}
+
+body.page-dteam .footer p {
+    font-size: 17px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+body.page-dteam .footer-contact p,
+body.page-dteam .footer-social p {
+    margin-bottom: 15px;
+}
+
+body.page-dteam .footer a {
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+body.page-dteam .footer a:hover {
+    color: #C7A66A;
+}
+
+body.page-dteam .footer-slogan {
+    color: #C7A66A;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+body.page-dteam .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #444444;
+    padding-top: 18px;
+    color: #AAAAAA;
+    font-size: 15px;
+}
+
+/* Sửa lỗi font-size của footer-bottom */
+
+body.page-dteam .footer-bottom p {
+    font-size: inherit;
+    margin: 0;
+}
+
+/* =========================================
+   10. RESPONSIVE - TABLET
+   MAN HINH TOI DA 1024PX
+========================================= */
+
+@media (max-width: 1024px) {
+    body.page-dteam header {
+        padding: 12px 3%;
+        gap: 15px;
+    }
+
+    body.page-dteam .logo {
+        font-size: 26px;
+    }
+
+    body.page-dteam .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    body.page-dteam .navbar {
+        gap: 12px;
+    }
+
+    body.page-dteam .navbar a {
+        font-size: 15px;
+    }
+
+    body.page-dteam .about-banner {
+        height: 350px;
+    }
+
+    body.page-dteam .story,
+    body.page-dteam .philosophy,
+    body.page-dteam .coach,
+    body.page-dteam .students,
+    body.page-dteam .gym {
+        padding: 65px 6%;
+    }
+
+    body.page-dteam .story h2,
+    body.page-dteam .philosophy h2,
+    body.page-dteam .students h2,
+    body.page-dteam .gym h2,
+    body.page-dteam .coach-title h2 {
+        font-size: 35px;
+    }
+
+    body.page-dteam .story p {
+        font-size: 18px;
+    }
+
+    body.page-dteam .three-cards {
+        gap: 20px;
+    }
+
+    body.page-dteam .card img {
+        height: 210px;
+    }
+
+    body.page-dteam .card h3 {
+        font-size: 23px;
+    }
+
+    body.page-dteam .card p {
+        font-size: 16px;
+    }
+
+    body.page-dteam .coach-content {
+        gap: 30px;
+    }
+
+    body.page-dteam .coach-content > img {
+        height: 450px;
+    }
+
+    body.page-dteam .coach-info h3 {
+        font-size: 20px;
+    }
+
+    body.page-dteam .coach-info p,
+    body.page-dteam .coach-info li {
+        font-size: 17px;
+    }
+
+    body.page-dteam .student-card img {
+        height: 280px;
+    }
+
+    body.page-dteam .student-card h3 {
+        font-size: 22px;
+    }
+
+    body.page-dteam .student-card p,
+    body.page-dteam .student-card li {
+        font-size: 16px;
+    }
+
+    body.page-dteam .gym-images img {
+        height: 280px;
+    }
+
+    body.page-dteam .footer {
+        padding: 40px 4% 15px;
+    }
+
+    body.page-dteam .footer-top {
+        gap: 25px;
+    }
+
+    body.page-dteam .footer h3 {
+        font-size: 19px;
+    }
+
+    body.page-dteam .footer p {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   11. RESPONSIVE - TABLET NHO
+   MAN HINH TOI DA 900PX
+========================================= */
+
+@media (max-width: 900px) {
+    body.page-dteam header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    body.page-dteam .navbar {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* =========================================
+   12. RESPONSIVE - MOBILE
+   MAN HINH TOI DA 768PX
+========================================= */
+
+@media (max-width: 768px) {
+    body.page-dteam header {
+        padding: 15px;
+    }
+
+    body.page-dteam .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    body.page-dteam .navbar a {
+        font-size: 15px;
+    }
+
+    body.page-dteam .about-banner {
+        height: 260px;
+    }
+
+    body.page-dteam .story,
+    body.page-dteam .philosophy,
+    body.page-dteam .coach,
+    body.page-dteam .students,
+    body.page-dteam .gym {
+        padding: 50px 6%;
+    }
+
+    body.page-dteam .story h2,
+    body.page-dteam .philosophy h2,
+    body.page-dteam .students h2,
+    body.page-dteam .gym h2,
+    body.page-dteam .coach-title h2 {
+        font-size: 30px;
+        margin-bottom: 28px;
+    }
+
+    body.page-dteam .story p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    body.page-dteam .three-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    body.page-dteam .card img {
+        height: 270px;
+    }
+
+    body.page-dteam .card h3 {
+        font-size: 25px;
+    }
+
+    body.page-dteam .card h4 {
+        font-size: 19px;
+    }
+
+    body.page-dteam .card p {
+        font-size: 17px;
+    }
+
+    body.page-dteam .coach-title h3 {
+        font-size: 25px;
+    }
+
+    body.page-dteam .coach-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.page-dteam .coach-content > img {
+        width: 100%;
+        height: 380px;
+    }
+
+    body.page-dteam .coach-info {
+        width: 100%;
+    }
+
+    body.page-dteam .coach-info h3 {
+        font-size: 21px;
+    }
+
+    body.page-dteam .coach-info p,
+    body.page-dteam .coach-info li {
+        font-size: 17px;
+    }
+
+    body.page-dteam .student-grid,
+    body.page-dteam .gym-images {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    body.page-dteam .student-card img {
+        height: 320px;
+    }
+
+    body.page-dteam .student-card h3 {
+        font-size: 23px;
+    }
+
+    body.page-dteam .student-card p,
+    body.page-dteam .student-card li {
+        font-size: 17px;
+    }
+
+    body.page-dteam .gym-images img {
+        height: 270px;
+    }
+
+    body.page-dteam .footer {
+        padding: 35px 6% 15px;
+    }
+
+    body.page-dteam .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.page-dteam .footer-logo,
+    body.page-dteam .footer-contact,
+    body.page-dteam .footer-social {
+        width: 100%;
+    }
+
+    body.page-dteam .footer h3 {
+        font-size: 19px;
+    }
+
+    body.page-dteam .footer p {
+        font-size: 16px;
+    }
+
+    body.page-dteam .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+/* =========================================
+   13. RESPONSIVE - DIEN THOAI NHO
+   MAN HINH TOI DA 480PX
+========================================= */
+
+@media (max-width: 480px) {
+    body.page-dteam .logo {
+        font-size: 24px;
+    }
+
+    body.page-dteam .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    body.page-dteam .navbar {
+        gap: 8px 12px;
+    }
+
+    body.page-dteam .navbar a {
+        font-size: 13px;
+    }
+
+    body.page-dteam .navbar .register-btn {
+        padding: 7px 12px;
+    }
+
+    body.page-dteam .about-banner {
+        height: 200px;
+    }
+
+    body.page-dteam .story,
+    body.page-dteam .philosophy,
+    body.page-dteam .coach,
+    body.page-dteam .students,
+    body.page-dteam .gym {
+        padding: 38px 5%;
+    }
+
+    body.page-dteam .story h2,
+    body.page-dteam .philosophy h2,
+    body.page-dteam .students h2,
+    body.page-dteam .gym h2,
+    body.page-dteam .coach-title h2 {
+        font-size: 26px;
+    }
+
+    body.page-dteam .story p {
+        font-size: 16px;
+    }
+
+    body.page-dteam .card img {
+        height: 220px;
+    }
+
+    body.page-dteam .card h3 {
+        font-size: 23px;
+    }
+
+    body.page-dteam .card h4 {
+        font-size: 18px;
+    }
+
+    body.page-dteam .card p {
+        font-size: 16px;
+    }
+
+    body.page-dteam .coach-title h3 {
+        font-size: 22px;
+    }
+
+    body.page-dteam .coach-title p {
+        font-size: 15px;
+    }
+
+    body.page-dteam .coach-content > img {
+        height: 300px;
+    }
+
+    body.page-dteam .coach-info h3 {
+        font-size: 19px;
+    }
+
+    body.page-dteam .coach-info p,
+    body.page-dteam .coach-info li {
+        font-size: 16px;
+    }
+
+    body.page-dteam .student-card img {
+        height: 250px;
+    }
+
+    body.page-dteam .student-card > div {
+        padding: 0 15px;
+    }
+
+    body.page-dteam .student-card h3 {
+        font-size: 21px;
+    }
+
+    body.page-dteam .student-card p,
+    body.page-dteam .student-card li {
+        font-size: 15px;
+    }
+
+    body.page-dteam .gym-images img {
+        height: 210px;
+    }
+
+    body.page-dteam .footer {
+        padding: 30px 5% 12px;
+    }
+
+    body.page-dteam .footer-logo .logo {
+        font-size: 24px;
+    }
+
+    body.page-dteam .footer h3 {
+        font-size: 17px;
+    }
+
+    body.page-dteam .footer p {
+        font-size: 15px;
+    }
+
+    body.page-dteam .footer-bottom {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   14. GIAM CHUYEN DONG
+   HO TRO NGUOI DUNG HAN CHE ANIMATION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html:has(body.page-dteam) {
+        scroll-behavior: auto;
+    }
+
+    body.page-dteam *,
+    body.page-dteam *::before,
+    body.page-dteam *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* =====================================================================
+   PAGE: MON HOC (monhoc.html)   -> body.page-monhoc
+===================================================================== */
+
+/* =========================================
+   1. CAI DAT CHUNG
+========================================= */
+
+body.page-monhoc {
+    font-family: "Times New Roman", Times, serif;
+    color: #222222;
+    background-color: #FFFFFF;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body.page-monhoc a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body.page-monhoc img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+body.page-monhoc header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 5%;
+    background-color: #000000;
+}
+
+body.page-monhoc .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+body.page-monhoc .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+body.page-monhoc .navbar {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+body.page-monhoc .navbar a {
+    color: #E5E5E0;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+body.page-monhoc .navbar a:hover,
+body.page-monhoc .navbar a.active {
+    color: #C7A66A;
+}
+
+body.page-monhoc .navbar .register-btn {
+    background-color: #C7A66A;
+    color: #000000;
+    padding: 11px 20px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.page-monhoc .navbar .register-btn:hover {
+    background-color: #AD8D53;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   3. HERO BANNER
+========================================= */
+
+/* =========================================
+   3. HERO BANNER - ANH NEN MO
+========================================= */
+
+body.page-monhoc .class-banner {
+    position: relative;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 9%;
+    color: white;
+    text-align: center;
+
+    overflow: hidden;
+    background-color: #151515;
+}
+
+/* LOP ANH NEN */
+
+body.page-monhoc .class-banner::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+
+    background-image: url("https://images.openai.com/static-rsc-4/FPmDr12g_k547y8OpuclHhyfFPNi9ue-GoC6kspPlWEwGGXz-qx5j2-blS2SE87ZAiZ4UsQVZ_QuZritZxhn8nn7jk_gAk9UfGxEve5YPe4pijz6y_JU_y0o_9rx5S-1j5MQQQE7-pcr-D0BDZtbaRQJApFD2f--w9UleUzL4Plq7_JXnDu7u5TaRFHvx9Af?purpose=fullsize");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(3px);
+    opacity: 0.55;
+
+    transform: scale(1.03);
+    z-index: 0;
+}
+
+/* LOP PHU LAM TOI ANH */
+
+body.page-monhoc .class-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.30)
+    );
+
+    z-index: 1;
+}
+
+/* NOI DUNG HERO */
+
+body.page-monhoc .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+body.page-monhoc .banner-content p {
+    color: #C7A66A;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+body.page-monhoc .banner-content h1 {
+    color: white;
+    font-size: 58px;
+    line-height: 1.2;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+body.page-monhoc .banner-content span {
+    display: block;
+    color: #E5E5E0;
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   4. CAC BO MON
+========================================= */
+
+body.page-monhoc .discipline {
+    padding: 90px 9%;
+    background-color: #F2F0E9;
+    color: #222222;
+}
+
+body.page-monhoc .discipline-dark {
+    background-color: #E6E5DC;
+}
+
+body.page-monhoc .discipline-heading {
+    max-width: 1150px;
+    margin: 0 auto 40px;
+}
+
+body.page-monhoc .discipline-heading span {
+    color: #AD8D53;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+body.page-monhoc .discipline-heading h2 {
+    color: #000000;
+    font-size: 43px;
+    line-height: 1.3;
+    margin: 10px 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+body.page-monhoc .discipline-heading h3 {
+    color: #AD8D53;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+/* BỐ CỤC SO LE */
+
+body.page-monhoc .discipline-main {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+    min-width: 0;
+}
+
+/* Đảo vị trí môn MMA */
+
+body.page-monhoc .discipline-main.reverse .discipline-image {
+    order: 2;
+}
+
+body.page-monhoc .discipline-main.reverse .discipline-info {
+    order: 1;
+}
+
+/* HÌNH ẢNH */
+
+body.page-monhoc .discipline-image {
+    min-width: 0;
+}
+
+body.page-monhoc .discipline-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 10px 10px 0 #C7A66A;
+    transition: 0.35s;
+}
+
+body.page-monhoc .discipline-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 13px 13px 0 #AD8D53;
+}
+
+/* NỘI DUNG */
+
+body.page-monhoc .discipline-info {
+    min-width: 0;
+    color: #222222;
+}
+
+body.page-monhoc .discipline-info .description {
+    color: #626962;
+    font-size: 21px;
+    line-height: 1.9;
+    margin-bottom: 27px;
+    text-align: justify;
+}
+
+body.page-monhoc .discipline-info h3 {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+body.page-monhoc .discipline-info ul {
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+body.page-monhoc .discipline-info li {
+    color: #333333;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 13px;
+}
+
+/* ĐỐI TƯỢNG PHÙ HỢP */
+
+body.page-monhoc .target {
+    padding: 22px 24px;
+    background-color: #E6E5DC;
+    border-left: 5px solid #C7A66A;
+    border-radius: 2px;
+}
+
+body.page-monhoc .target strong {
+    color: #AD8D53;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+body.page-monhoc .target p {
+    color: #333333;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 9px;
+}
+
+/* =========================================
+   5. CALL TO ACTION
+========================================= */
+
+body.page-monhoc .class-cta {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: #26332D;
+    color: #FFFFFF;
+}
+
+body.page-monhoc .class-cta > p:first-child {
+    color: #C7A66A;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+body.page-monhoc .class-cta h2 {
+    color: #FFFFFF;
+    font-size: 43px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+body.page-monhoc .class-cta > p:not(:first-child) {
+    color: #D2D6D0;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+body.page-monhoc .class-cta a {
+    display: inline-block;
+    background-color: #C7A66A;
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.page-monhoc .class-cta a:hover {
+    background-color: #AD8D53;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   6. FOOTER
+========================================= */
+
+body.page-monhoc .footer {
+    background-color: #111111;
+    color: #FFFFFF;
+    padding: 50px 6% 18px;
+}
+
+body.page-monhoc .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+body.page-monhoc .footer-logo,
+body.page-monhoc .footer-contact,
+body.page-monhoc .footer-social {
+    flex: 1;
+    min-width: 0;
+}
+
+body.page-monhoc .footer-logo .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+body.page-monhoc .footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+body.page-monhoc .footer-logo p {
+    color: #CCCCCC;
+    font-size: 19px;
+    margin-top: 17px;
+}
+
+body.page-monhoc .footer h3 {
+    color: #FFFFFF;
+    font-size: 23px;
+    margin-bottom: 22px;
+    padding-left: 12px;
+    border-left: 4px solid #C7A66A;
+}
+
+body.page-monhoc .footer p {
+    color: #CCCCCC;
+    font-size: 19px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+body.page-monhoc .footer-contact p,
+body.page-monhoc .footer-social p {
+    margin-bottom: 15px;
+}
+
+body.page-monhoc .footer a {
+    color: #CCCCCC;
+    transition: 0.3s;
+}
+
+body.page-monhoc .footer a:hover {
+    color: #C7A66A;
+}
+
+body.page-monhoc .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+    color: #AAAAAA;
+    font-size: 16px;
+}
+
+/* Khắc phục lỗi cỡ chữ footer-bottom */
+
+body.page-monhoc .footer-bottom p {
+    color: #AAAAAA;
+    font-size: inherit;
+}
+
+/* =========================================
+   7. RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+    body.page-monhoc header {
+        padding: 12px 3%;
+    }
+
+    body.page-monhoc .logo {
+        font-size: 26px;
+    }
+
+    body.page-monhoc .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    body.page-monhoc .navbar {
+        gap: 14px;
+    }
+
+    body.page-monhoc .navbar a {
+        font-size: 15px;
+    }
+
+    body.page-monhoc .class-banner {
+        min-height: 390px;
+    }
+
+    body.page-monhoc .banner-content h1 {
+        font-size: 44px;
+    }
+
+    body.page-monhoc .banner-content span {
+        font-size: 19px;
+    }
+
+    body.page-monhoc .discipline {
+        padding: 65px 6%;
+    }
+
+    body.page-monhoc .discipline-main {
+        gap: 35px;
+    }
+
+    body.page-monhoc .discipline-image img {
+        height: 380px;
+    }
+
+    body.page-monhoc .discipline-heading h2 {
+        font-size: 37px;
+    }
+
+    body.page-monhoc .discipline-heading h3 {
+        font-size: 19px;
+    }
+
+    body.page-monhoc .discipline-info .description {
+        font-size: 19px;
+    }
+
+    body.page-monhoc .discipline-info h3 {
+        font-size: 22px;
+    }
+
+    body.page-monhoc .discipline-info li {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .target p {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .footer {
+        padding: 40px 4% 15px;
+    }
+
+    body.page-monhoc .footer-top {
+        gap: 25px;
+    }
+
+    body.page-monhoc .footer h3 {
+        font-size: 21px;
+    }
+
+    body.page-monhoc .footer p {
+        font-size: 17px;
+    }
+}
+
+/* =========================================
+   8. RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+    body.page-monhoc header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    body.page-monhoc .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    body.page-monhoc .navbar a {
+        font-size: 15px;
+    }
+
+    body.page-monhoc .class-banner {
+    min-height: 430px;
+    padding: 55px 6%;
+    }
+
+    body.page-monhoc .banner-content h1 {
+    font-size: 36px;
+    }
+
+    body.page-monhoc .banner-content p {
+    font-size: 16px;
+    }
+
+    body.page-monhoc .banner-content span {
+    font-size: 16px;
+    }
+
+    body.page-monhoc .discipline {
+        padding: 55px 6%;
+    }
+
+    body.page-monhoc .discipline-heading {
+        margin-bottom: 30px;
+    }
+
+    body.page-monhoc .discipline-heading span {
+        font-size: 17px;
+    }
+
+    body.page-monhoc .discipline-heading h2 {
+        font-size: 32px;
+    }
+
+    body.page-monhoc .discipline-heading h3 {
+        font-size: 17px;
+    }
+
+    body.page-monhoc .discipline-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    body.page-monhoc .discipline-main.reverse .discipline-image,
+    body.page-monhoc .discipline-main.reverse .discipline-info {
+        order: unset;
+    }
+
+    body.page-monhoc .discipline-image img {
+        height: 330px;
+    }
+
+    body.page-monhoc .discipline-info .description {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .discipline-info h3 {
+        font-size: 21px;
+    }
+
+    body.page-monhoc .discipline-info li {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .target strong {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .target p {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .class-cta {
+        padding: 65px 6%;
+    }
+
+    body.page-monhoc .class-cta h2 {
+        font-size: 32px;
+    }
+
+    body.page-monhoc .class-cta > p:not(:first-child) {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .footer {
+        padding: 40px 6% 15px;
+    }
+
+    body.page-monhoc .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.page-monhoc .footer-logo,
+    body.page-monhoc .footer-contact,
+    body.page-monhoc .footer-social {
+        width: 100%;
+    }
+
+    body.page-monhoc .footer h3 {
+        font-size: 20px;
+    }
+
+    body.page-monhoc .footer p {
+        font-size: 17px;
+    }
+
+    body.page-monhoc .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* =========================================
+   9. RESPONSIVE - DIEN THOAI NHO
+========================================= */
+
+@media (max-width: 480px) {
+    body.page-monhoc .logo {
+        font-size: 24px;
+    }
+
+    body.page-monhoc .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    body.page-monhoc .navbar {
+        gap: 8px 12px;
+    }
+
+    body.page-monhoc .navbar a {
+        font-size: 13px;
+    }
+
+    body.page-monhoc .navbar .register-btn {
+        padding: 7px 12px;
+    }
+
+    body.page-monhoc .class-banner {
+        min-height: 370px;
+        padding: 40px 5%;
+    }
+
+    body.page-monhoc .banner-content h1 {
+        font-size: 29px;
+    }
+
+    body.page-monhoc .banner-content p {
+        font-size: 14px;
+    }
+
+    body.page-monhoc .banner-content span {
+        font-size: 15px;
+    }
+
+    body.page-monhoc .discipline {
+        padding: 40px 5%;
+    }
+
+    body.page-monhoc .discipline-heading span {
+        font-size: 15px;
+    }
+
+    body.page-monhoc .discipline-heading h2 {
+        font-size: 27px;
+    }
+
+    body.page-monhoc .discipline-heading h3 {
+        font-size: 15px;
+    }
+
+    body.page-monhoc .discipline-image img {
+        height: 240px;
+    }
+
+    body.page-monhoc .discipline-info .description {
+        font-size: 17px;
+    }
+
+    body.page-monhoc .discipline-info h3 {
+        font-size: 19px;
+    }
+
+    body.page-monhoc .discipline-info li {
+        font-size: 16px;
+    }
+
+    body.page-monhoc .target {
+        padding: 17px;
+    }
+
+    body.page-monhoc .target strong {
+        font-size: 16px;
+    }
+
+    body.page-monhoc .target p {
+        font-size: 16px;
+    }
+
+    body.page-monhoc .class-cta {
+        padding: 50px 5%;
+    }
+
+    body.page-monhoc .class-cta h2 {
+        font-size: 26px;
+    }
+
+    body.page-monhoc .class-cta > p:not(:first-child) {
+        font-size: 16px;
+    }
+
+    body.page-monhoc .class-cta a {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+
+    body.page-monhoc .footer {
+        padding: 30px 5% 12px;
+    }
+
+    body.page-monhoc .footer-logo .logo {
+        font-size: 24px;
+    }
+
+    body.page-monhoc .footer h3 {
+        font-size: 18px;
+    }
+
+    body.page-monhoc .footer p {
+        font-size: 15px;
+    }
+
+    body.page-monhoc .footer-bottom {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================================
+   PAGE: LICH TAP - GOI TAP (goitap.html)   -> body.page-goitap
+===================================================================== */
+
+/* =========================================
+   1. CAI DAT CHUNG
+========================================= */
+
+html:has(body.page-goitap) {
+    scroll-padding-top: 20px;
+}
+
+body.page-goitap {
+    font-family: "Times New Roman", Times, serif;
+    color: #222222;
+    background-color: #FFFFFF;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+body.page-goitap a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body.page-goitap img {
+    max-width: 100%;
+    display: block;
+}
+
+body.page-goitap button,
+body.page-goitap a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body.page-goitap a:focus-visible {
+    outline: 2px solid #C7A66A;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+body.page-goitap header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 17px 5%;
+    background-color: #000000;
+    position: relative;
+    z-index: 10;
+}
+
+body.page-goitap .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+body.page-goitap .logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body.page-goitap .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+body.page-goitap .navbar a {
+    color: #E5E5E0;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+body.page-goitap .navbar a:hover,
+body.page-goitap .navbar a.active {
+    color: #C7A66A;
+}
+
+body.page-goitap .navbar .register-btn {
+    background-color: #C7A66A;
+    color: #000000;
+    padding: 11px 20px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.page-goitap .navbar .register-btn:hover {
+    background-color: #AD8D53;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   3. PAGE BANNER
+========================================= */
+
+/* =========================================
+   PAGE BANNER - ANH NEN MO
+========================================= */
+
+body.page-goitap .page-banner {
+    position: relative;
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 8%;
+    text-align: center;
+    color: white;
+
+    overflow: hidden;
+    background-color: #151915;
+}
+
+/* LOP ANH NEN */
+
+body.page-goitap .page-banner::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+
+    background-image: url("https://i.pinimg.com/736x/82/34/6b/82346bec0aba3443ba2641a4ab221dd9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(4px);
+    opacity: 0.55;
+
+    transform: scale(1.03);
+    z-index: 0;
+}
+
+/* LOP PHU LAM TOI ANH */
+
+body.page-goitap .page-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(15, 22, 19, 0.88),
+        rgba(15, 22, 19, 0.65),
+        rgba(15, 22, 19, 0.40)
+    );
+
+    z-index: 1;
+}
+
+/* NOI DUNG BANNER */
+
+body.page-goitap .banner-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    margin: auto;
+}
+
+body.page-goitap .banner-content > p:first-child {
+    color: #C7A66A;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+body.page-goitap .banner-content h1 {
+    font-size: 52px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+body.page-goitap .banner-content h1 span {
+    color: #C7A66A;
+}
+
+body.page-goitap .banner-content > p:last-child {
+    color: #E0E2DC;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   4. TIEU DE CAC PHAN
+========================================= */
+
+body.page-goitap .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+body.page-goitap .section-title > p {
+    color: #AD8D53;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+body.page-goitap .section-title h2 {
+    color: #111111;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+body.page-goitap .section-title span {
+    display: block;
+    width: 75px;
+    height: 4px;
+    background-color: #C7A66A;
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+/* =========================================
+   5. LICH TAP
+========================================= */
+
+body.page-goitap .lichtap {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 75px 0 65px;
+}
+
+body.page-goitap .anhlichtap {
+    text-align: center;
+    background-color: #F2F0E9;
+    padding: 30px;
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        8px 8px 0 rgba(199, 166, 106, 0.55);
+
+    transition: 0.3s;
+}
+
+body.page-goitap .anhlichtap:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12),
+        8px 8px 0 rgba(199, 166, 106, 0.75);
+}
+
+body.page-goitap .anhlichtap img {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* =========================================
+   6. GOI TAP
+========================================= */
+
+body.page-goitap .goitap {
+    background-color: #F2F0E9;
+    padding: 75px 0 55px;
+}
+
+body.page-goitap .goitap > .section-title {
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   7. CAC KHOA HOC
+========================================= */
+
+body.page-goitap .khoahoc {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+body.page-goitap .tenkhoahoc {
+    margin-bottom: 30px;
+    border-left: 5px solid #C7A66A;
+    padding: 5px 0 5px 20px;
+}
+
+body.page-goitap .tenkhoahoc h2 {
+    font-size: 34px;
+    color: #26332D;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+body.page-goitap .tenkhoahoc p {
+    color: #626962;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   8. CHIA COT KHOA HOC
+========================================= */
+
+body.page-goitap .chiaphan {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* =========================================
+   9. CARD KHOA HOC
+========================================= */
+
+body.page-goitap .cardkhoahoc {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+body.page-goitap .cardkhoahoc:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.14);
+}
+
+body.page-goitap .cardkhoahoc img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+body.page-goitap .cardkhoahoc:hover img {
+    transform: scale(1.035);
+}
+
+/* =========================================
+   10. THONG TIN KHOA HOC
+========================================= */
+
+body.page-goitap .thongtin {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 28px;
+}
+
+body.page-goitap .level {
+    display: inline-block;
+    align-self: flex-start;
+
+    background-color: #26332D;
+    color: #C7A66A;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    padding: 7px 14px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+}
+
+body.page-goitap .thongtin h3 {
+    color: #222222;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 13px;
+    font-weight: 800;
+}
+
+body.page-goitap .thongtin > p {
+    color: #626962;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   11. CHI TIET KHOA HOC
+========================================= */
+
+body.page-goitap .chitiet {
+    color: #626962;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+body.page-goitap .chitiet p {
+    margin-bottom: 7px;
+}
+
+/* =========================================
+   12. GIA KHOA HOC
+========================================= */
+
+body.page-goitap .gia {
+    font-size: 30px;
+    font-weight: bold;
+    color: #AD8D53;
+    margin: 12px 0 22px;
+}
+
+/* =========================================
+   13. NUT CHI TIET
+========================================= */
+
+body.page-goitap .nutbam {
+    display: block;
+    width: 100%;
+
+    margin-top: auto;
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: #26332D;
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+body.page-goitap .nutbam:hover {
+    background-color: #C7A66A;
+    color: #111111;
+
+    box-shadow: 0 5px 15px rgba(199, 166, 106, 0.3);
+}
+
+/* =========================================
+   14. CALL TO ACTION
+========================================= */
+
+body.page-goitap .final-cta {
+    position: relative;
+
+    padding: 100px 8%;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(18, 25, 21, 0.94),
+            rgba(18, 25, 21, 0.94)
+        ),
+        url("images/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+body.page-goitap .cta-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+body.page-goitap .cta-content > p:first-child {
+    color: #C7A66A;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+body.page-goitap .cta-content h2 {
+    font-size: 46px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+    font-weight: 900;
+}
+
+body.page-goitap .cta-content h2 span {
+    color: #C7A66A;
+}
+
+body.page-goitap .cta-content p {
+    color: #D2D6D0;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+body.page-goitap .btn {
+    display: inline-block;
+
+    background-color: #C7A66A;
+    color: #111111;
+
+    padding: 16px 30px;
+
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+body.page-goitap .btn:hover {
+    background-color: #AD8D53;
+    color: #FFFFFF;
+
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(199, 166, 106, 0.25);
+}
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+body.page-goitap .footer {
+    background-color: #111111;
+    color: #FFFFFF;
+    padding: 55px 6% 18px;
+}
+
+body.page-goitap .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+    padding-bottom: 40px;
+}
+
+body.page-goitap .footer-logo,
+body.page-goitap .footer-contact,
+body.page-goitap .footer-social {
+    width: 33.33%;
+}
+
+body.page-goitap .footer-logo .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #C7A66A;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+body.page-goitap .footer-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body.page-goitap .footer-logo p {
+    color: #CCCCCC;
+    font-size: 19px;
+    margin-top: 18px;
+}
+
+body.page-goitap .footer h3 {
+    font-size: 22px;
+    margin-bottom: 23px;
+
+    padding-left: 14px;
+    border-left: 4px solid #C7A66A;
+}
+
+body.page-goitap .footer p {
+    font-size: 16px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+body.page-goitap .footer-contact p,
+body.page-goitap .footer-social p {
+    margin-bottom: 17px;
+}
+
+body.page-goitap .footer a {
+    color: #CCCCCC;
+    transition: 0.3s;
+}
+
+body.page-goitap .footer a:hover {
+    color: #C7A66A;
+}
+
+body.page-goitap .footer-slogan {
+    color: #C7A66A;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 28px;
+}
+
+body.page-goitap .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+
+    color: #AAAAAA;
+    font-size: 15px;
+}
+
+body.page-goitap .footer-bottom p {
+    font-size: 15px;
+}
+
+/* =========================================
+   16. RESPONSIVE - TABLET
+   Man hinh toi da 1024px
+========================================= */
+
+@media (max-width: 1024px) {
+    body.page-goitap header {
+        padding: 15px 3%;
+        gap: 15px;
+    }
+
+    body.page-goitap .logo {
+        font-size: 25px;
+    }
+
+    body.page-goitap .logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    body.page-goitap .navbar {
+        gap: 12px;
+    }
+
+    body.page-goitap .navbar a {
+        font-size: 14px;
+    }
+
+    body.page-goitap .banner-content h1 {
+        font-size: 45px;
+    }
+
+    body.page-goitap .section-title h2 {
+        font-size: 36px;
+    }
+
+    body.page-goitap .chiaphan {
+        gap: 22px;
+    }
+
+    body.page-goitap .cardkhoahoc img {
+        height: 230px;
+    }
+
+    body.page-goitap .thongtin {
+        padding: 22px;
+    }
+
+    body.page-goitap .thongtin h3 {
+        font-size: 22px;
+    }
+
+    body.page-goitap .thongtin > p {
+        font-size: 16px;
+    }
+
+    body.page-goitap .gia {
+        font-size: 27px;
+    }
+
+    body.page-goitap .footer {
+        padding: 45px 4% 18px;
+    }
+
+    body.page-goitap .footer-top {
+        gap: 25px;
+    }
+
+    body.page-goitap .footer h3 {
+        font-size: 19px;
+    }
+}
+
+/* =========================================
+   17. RESPONSIVE - MOBILE
+   Man hinh toi da 768px
+========================================= */
+
+@media (max-width: 768px) {
+    body.page-goitap header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 17px 4%;
+    }
+
+    body.page-goitap .logo {
+        font-size: 27px;
+    }
+
+    body.page-goitap .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    body.page-goitap .navbar a {
+        font-size: 14px;
+    }
+
+    body.page-goitap .page-banner {
+        min-height: 300px;
+        padding: 50px 6%;
+    }
+
+    body.page-goitap .banner-content h1 {
+        font-size: 37px;
+    }
+
+    body.page-goitap .banner-content > p:first-child {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    body.page-goitap .banner-content > p:last-child {
+        font-size: 17px;
+    }
+
+    body.page-goitap .lichtap {
+        width: 90%;
+        padding: 55px 0;
+    }
+
+    body.page-goitap .section-title {
+        margin-bottom: 30px;
+    }
+
+    body.page-goitap .section-title h2 {
+        font-size: 32px;
+    }
+
+    body.page-goitap .section-title > p {
+        font-size: 13px;
+    }
+
+    body.page-goitap .anhlichtap {
+        padding: 16px;
+    }
+
+    body.page-goitap .goitap {
+        padding: 55px 0 35px;
+    }
+
+    body.page-goitap .khoahoc {
+        width: 90%;
+        padding: 30px 0;
+    }
+
+    body.page-goitap .tenkhoahoc h2 {
+        font-size: 29px;
+    }
+
+    body.page-goitap .tenkhoahoc p {
+        font-size: 16px;
+    }
+
+    body.page-goitap .chiaphan {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    body.page-goitap .cardkhoahoc img {
+        height: 190px;
+    }
+
+    body.page-goitap .thongtin {
+        padding: 17px;
+    }
+
+    body.page-goitap .level {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    body.page-goitap .thongtin h3 {
+        font-size: 19px;
+    }
+
+    body.page-goitap .thongtin > p {
+        font-size: 15px;
+    }
+
+    body.page-goitap .chitiet {
+        font-size: 14px;
+    }
+
+    body.page-goitap .gia {
+        font-size: 23px;
+    }
+
+    body.page-goitap .nutbam {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    body.page-goitap .final-cta {
+        padding: 70px 6%;
+    }
+
+    body.page-goitap .cta-content h2 {
+        font-size: 35px;
+    }
+
+    body.page-goitap .cta-content p {
+        font-size: 18px;
+    }
+
+    body.page-goitap .footer {
+        padding: 40px 6% 18px;
+    }
+
+    body.page-goitap .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.page-goitap .footer-logo,
+    body.page-goitap .footer-contact,
+    body.page-goitap .footer-social {
+        width: 100%;
+    }
+
+    body.page-goitap .footer h3 {
+        font-size: 19px;
+    }
+
+    body.page-goitap .footer p {
+        font-size: 16px;
+    }
+
+    body.page-goitap .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* =========================================
+   18. RESPONSIVE - DIEN THOAI NHO
+   Man hinh toi da 480px
+========================================= */
+
+@media (max-width: 480px) {
+    body.page-goitap header {
+        padding: 15px 4%;
+    }
+
+    body.page-goitap .logo {
+        font-size: 25px;
+    }
+
+    body.page-goitap .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    body.page-goitap .navbar {
+        gap: 10px 13px;
+    }
+
+    body.page-goitap .navbar a {
+        font-size: 13px;
+    }
+
+    body.page-goitap .navbar .register-btn {
+        padding: 8px 13px;
+    }
+
+    body.page-goitap .page-banner {
+        min-height: 250px;
+        padding: 40px 5%;
+    }
+
+    body.page-goitap .banner-content h1 {
+        font-size: 29px;
+    }
+
+    body.page-goitap .banner-content > p:first-child {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    body.page-goitap .banner-content > p:last-child {
+        font-size: 15px;
+    }
+
+    body.page-goitap .section-title {
+        margin-bottom: 25px;
+    }
+
+    body.page-goitap .section-title h2 {
+        font-size: 27px;
+    }
+
+    body.page-goitap .section-title > p {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    body.page-goitap .lichtap {
+        padding: 40px 0;
+    }
+
+    body.page-goitap .anhlichtap {
+        padding: 10px;
+    }
+
+    body.page-goitap .goitap {
+        padding: 40px 0 25px;
+    }
+
+    body.page-goitap .khoahoc {
+        width: 90%;
+        padding: 22px 0;
+    }
+
+    body.page-goitap .tenkhoahoc {
+        padding-left: 13px;
+        margin-bottom: 22px;
+    }
+
+    body.page-goitap .tenkhoahoc h2 {
+        font-size: 26px;
+    }
+
+    body.page-goitap .tenkhoahoc p {
+        font-size: 15px;
+    }
+
+    /* Dien thoai: moi hang 1 khoa hoc */
+
+    body.page-goitap .chiaphan {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    body.page-goitap .cardkhoahoc img {
+        height: 230px;
+    }
+
+    body.page-goitap .thongtin {
+        padding: 20px;
+    }
+
+    body.page-goitap .level {
+        font-size: 12px;
+    }
+
+    body.page-goitap .thongtin h3 {
+        font-size: 21px;
+    }
+
+    body.page-goitap .thongtin > p {
+        font-size: 16px;
+    }
+
+    body.page-goitap .chitiet {
+        font-size: 15px;
+    }
+
+    body.page-goitap .gia {
+        font-size: 25px;
+    }
+
+    body.page-goitap .nutbam {
+        font-size: 14px;
+        padding: 13px;
+    }
+
+    body.page-goitap .final-cta {
+        padding: 55px 6%;
+    }
+
+    body.page-goitap .cta-content h2 {
+        font-size: 28px;
+    }
+
+    body.page-goitap .cta-content > p:first-child {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    body.page-goitap .cta-content p {
+        font-size: 16px;
+    }
+
+    body.page-goitap .btn {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    body.page-goitap .footer {
+        padding: 32px 5% 15px;
+    }
+
+    body.page-goitap .footer-logo .logo {
+        font-size: 25px;
+    }
+
+    body.page-goitap .footer h3 {
+        font-size: 18px;
+    }
+
+    body.page-goitap .footer-contact p,
+    body.page-goitap .footer-social p {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    body.page-goitap .footer-slogan {
+        font-size: 21px;
+    }
+
+    body.page-goitap .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================================
+   PAGE: DANG KY (cta.html)   -> body.page-cta
+===================================================================== */
+
+/* =========================
+   1. CAI DAT CHUNG
+========================= */
+
+body.page-cta {
+    font-family: "Times New Roman", Times, serif;
+    color: #F2F0E9;
+    min-height: 100vh;
+    line-height: 1.6;
+
+    background:
+        linear-gradient(
+            rgba(12, 15, 12, 0.88),
+            rgba(12, 15, 12, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1600&auto=format&fit=crop")
+        center / cover fixed no-repeat;
+}
+
+body.page-cta a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   2. HEADER
+========================= */
+
+body.page-cta header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 5%;
+
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(199, 166, 106, 0.25);
+}
+
+body.page-cta .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #C7A66A;
+    font-size: 28px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+body.page-cta .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+body.page-cta .navbar {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+body.page-cta .navbar a {
+    color: #E5E5E0;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+body.page-cta .navbar a:hover,
+body.page-cta .navbar a.active {
+    color: #C7A66A;
+}
+
+body.page-cta .navbar .register-btn {
+    background: #C7A66A;
+    color: #111310;
+
+    padding: 10px 18px;
+}
+
+body.page-cta .navbar .register-btn:hover {
+    background: #AD8D53;
+    color: #000;
+}
+
+/* =========================
+   3. FORM CONTAINER
+========================= */
+
+body.page-cta .form-container {
+    width: 90%;
+    max-width: 550px;
+
+    margin: 55px auto;
+    padding: 35px 40px;
+
+    background: rgba(24, 30, 25, 0.96);
+
+    border: 1px solid rgba(199, 166, 106, 0.3);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+
+    border-radius: 8px;
+}
+
+/* =========================
+   4. FORM HEADING
+========================= */
+
+body.page-cta .form-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+body.page-cta .sub-heading {
+    color: #C7A66A;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+body.page-cta .form-container h2 {
+    margin: 10px 0;
+
+    color: #F2F0E9;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+body.page-cta .form-heading p {
+    color: #A9AAA4;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================
+   5. TAB BUTTONS
+========================= */
+
+body.page-cta .tab-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+body.page-cta .tab-btn {
+    flex: 1;
+    padding: 13px 8px;
+
+    background: #202720;
+    border: 1px solid #485147;
+
+    color: #B8B9B1;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-cta .tab-btn:hover {
+    border-color: #C7A66A;
+    color: #C7A66A;
+}
+
+body.page-cta .tab-btn.active {
+    background: #C7A66A;
+    border-color: #C7A66A;
+    color: #111310;
+}
+
+/* =========================
+   6. NOTICE
+========================= */
+
+body.page-cta .notice {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+
+    background: rgba(199, 166, 106, 0.1);
+    border: 1px solid #C7A66A;
+
+    color: #C7A66A;
+    font-size: 13px;
+    line-height: 1.5;
+
+    border-radius: 4px;
+}
+
+/* =========================
+   7. FORM INPUTS
+========================= */
+
+body.page-cta .form-group {
+    margin-bottom: 18px;
+}
+
+body.page-cta .form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #D8D8D0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body.page-cta input,
+body.page-cta select,
+body.page-cta textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    background: #202720;
+    border: 1px solid #485147;
+
+    color: #F2F0E9;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+body.page-cta input::placeholder,
+body.page-cta textarea::placeholder {
+    color: #858980;
+}
+
+body.page-cta input:focus,
+body.page-cta select:focus,
+body.page-cta textarea:focus {
+    border-color: #C7A66A;
+
+    box-shadow: 0 0 0 2px rgba(199, 166, 106, 0.12);
+}
+
+body.page-cta select {
+    cursor: pointer;
+}
+
+body.page-cta select option {
+    background: #202720;
+    color: #F2F0E9;
+}
+
+body.page-cta textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* =========================
+   8. SUBMIT BUTTON
+========================= */
+
+body.page-cta .btn-submit {
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #C7A66A;
+    border: 1px solid #C7A66A;
+
+    color: #111310;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-cta .btn-submit:hover {
+    background: transparent;
+    color: #C7A66A;
+}
+
+body.page-cta .form-note {
+    margin-top: 14px;
+
+    color: #A9AAA4;
+    font-size: 11px;
+
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* =========================
+   9. SUCCESS BOX
+========================= */
+
+body.page-cta .success-box {
+    text-align: center;
+}
+
+body.page-cta .success-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #C7A66A;
+    border-radius: 50%;
+
+    color: #C7A66A;
+    font-size: 30px;
+}
+
+body.page-cta .success-box h3 {
+    color: #C7A66A;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+body.page-cta .success-box > p {
+    color: #A9AAA4;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+body.page-cta .result-card {
+    margin: 22px 0;
+    padding: 20px;
+
+    background: #202720;
+    border: 1px solid rgba(199, 166, 106, 0.25);
+
+    border-radius: 4px;
+
+    text-align: left;
+}
+
+body.page-cta .result-card p {
+    margin-bottom: 12px;
+
+    color: #D7D8D0;
+    font-size: 13px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+body.page-cta .result-card p:last-child {
+    margin-bottom: 0;
+}
+
+body.page-cta .result-card strong {
+    color: #C7A66A;
+}
+
+/* =========================
+   10. FOOTER
+========================= */
+
+body.page-cta .footer {
+    width: 100%;
+    padding: 45px 6% 15px;
+    background: #111310;
+    border-top: 1px solid rgba(199, 166, 106, 0.25);
+    color: white;
+}
+
+body.page-cta .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 35px;
+}
+
+body.page-cta .footer-logo,
+body.page-cta .footer-contact,
+body.page-cta .footer-social {
+    width: 33.33%;
+}
+
+body.page-cta .footer-logo .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #C7A66A;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+body.page-cta .footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+body.page-cta .footer-logo p {
+    color: #cccccc;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+body.page-cta .footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #C7A66A;
+}
+
+body.page-cta .footer p {
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+body.page-cta .footer-contact p,
+body.page-cta .footer-social p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+body.page-cta .footer a {
+    color: #cccccc;
+    transition: 0.3s;
+}
+
+body.page-cta .footer a:hover {
+    color: #C7A66A;
+}
+
+body.page-cta .footer-slogan {
+    color: #C7A66A;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+body.page-cta .footer-bottom {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #444444;
+    padding-top: 18px;
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+/* =========================
+   11. RESPONSIVE TABLET
+========================= */
+
+@media screen and (max-width: 1024px) {
+    body.page-cta header {
+        padding: 15px 4%;
+    }
+
+    body.page-cta .logo {
+        font-size: 24px;
+    }
+
+    body.page-cta .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    body.page-cta .navbar {
+        gap: 14px;
+    }
+
+    body.page-cta .navbar a {
+        font-size: 12px;
+    }
+
+    body.page-cta .form-container {
+        width: 85%;
+        max-width: 550px;
+        margin: 45px auto;
+    }
+
+    body.page-cta .footer {
+        padding: 40px 4% 15px;
+    }
+
+    body.page-cta .footer-top {
+        gap: 25px;
+    }
+
+    body.page-cta .footer h3 {
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   12. RESPONSIVE MOBILE
+   Man hinh toi da 768px
+========================= */
+
+@media screen and (max-width: 768px) {
+    /* HEADER */
+
+    body.page-cta header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    body.page-cta .navbar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    body.page-cta .navbar a {
+        font-size: 13px;
+    }
+
+    /* FORM */
+
+    body.page-cta .form-container {
+        width: 92%;
+        padding: 30px 25px;
+        margin: 35px auto;
+    }
+
+    body.page-cta .form-container h2 {
+        font-size: 23px;
+    }
+
+    body.page-cta .tab-group {
+        gap: 8px;
+    }
+
+    body.page-cta .tab-btn {
+        font-size: 12px;
+        padding: 12px 6px;
+    }
+
+    /* FOOTER */
+
+    body.page-cta .footer {
+        padding: 35px 6% 15px;
+    }
+
+    body.page-cta .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.page-cta .footer-logo,
+    body.page-cta .footer-contact,
+    body.page-cta .footer-social {
+        width: 100%;
+    }
+
+    body.page-cta .footer h3 {
+        font-size: 17px;
+    }
+
+    body.page-cta .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   13. RESPONSIVE SMALL MOBILE
+   Man hinh toi da 480px
+========================= */
+
+@media screen and (max-width: 480px) {
+    /* HEADER */
+
+    body.page-cta .logo {
+        font-size: 24px;
+    }
+
+    body.page-cta .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    body.page-cta .navbar {
+        gap: 10px 12px;
+    }
+
+    body.page-cta .navbar a {
+        font-size: 12px;
+    }
+
+    body.page-cta .navbar .register-btn {
+        padding: 7px 12px;
+    }
+
+    /* FORM */
+
+    body.page-cta .form-container {
+        width: 94%;
+        padding: 25px 18px;
+        margin: 25px auto;
+    }
+
+    body.page-cta .form-container h2 {
+        font-size: 20px;
+    }
+
+    body.page-cta .tab-group {
+        flex-direction: column;
+    }
+
+    body.page-cta .tab-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    body.page-cta .form-group label {
+        font-size: 12px;
+    }
+
+    body.page-cta input,
+    body.page-cta select,
+    body.page-cta textarea {
+        font-size: 12px;
+        padding: 11px;
+    }
+
+    body.page-cta .btn-submit {
+        font-size: 11px;
+        padding: 13px 10px;
+    }
+
+    /* FOOTER */
+
+    body.page-cta .footer {
+        padding: 30px 5% 12px;
+    }
+
+    body.page-cta .footer-logo .logo {
+        font-size: 24px;
+    }
+
+    body.page-cta .footer h3 {
+        font-size: 16px;
+    }
+
+    body.page-cta .footer-contact p,
+    body.page-cta .footer-social p {
+        font-size: 13px;
+    }
+
+    body.page-cta .footer-slogan {
+        font-size: 18px;
+    }
+
+    body.page-cta .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+
